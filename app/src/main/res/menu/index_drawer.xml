@@ -4,21 +4,23 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
+
         <item
             android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Mis cursos" />
+            android:icon="@drawable/ic_home"
+            android:title="HOME" />
+
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Mis cursos 2" />
+            android:icon="@drawable/ic_cursos"
+            android:title="Mis cursos" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Mis cursos 3" />
+            android:title="Mis cursos 2" />
         <item
             android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_cubos"
             android:title="Calculadora" />
     </group>
 
@@ -34,7 +36,7 @@
                 android:title="Send" />
         </menu>
     </item>
-    <item android:title="">
+    <item android:title="Salir">
         <menu>
             <item
                 android:id="@+id/logout"

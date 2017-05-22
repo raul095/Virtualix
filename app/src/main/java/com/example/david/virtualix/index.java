@@ -78,11 +78,12 @@ public class index extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
 
-            fragmentManager.beginTransaction().replace(R.id.contenedor,new menu1()).commit();
+            Intent restartindex = new Intent(index.this, index.class);
+            startActivity(restartindex);
 
         } else if (id == R.id.nav_gallery) {
 
-            fragmentManager.beginTransaction().replace(R.id.contenedor,new menu2()).commit();
+            fragmentManager.beginTransaction().replace(R.id.contenedor,new menu1()).commit();
 
         } else if (id == R.id.nav_slideshow) {
 
