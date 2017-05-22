@@ -40,7 +40,7 @@
         <menu>
             <item
                 android:id="@+id/logout"
-                android:icon="@drawable/ic_menu_manage"
+                android:icon="@drawable/ic_exit_to_app"
                 android:title="Cerrar sesión" />
         </menu>
     </item>
