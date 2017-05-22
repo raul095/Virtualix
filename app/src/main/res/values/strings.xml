@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Virtualix</string>
+    <string name="title_activity_index">index</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="operationsArray">
+        <item>Suma</item>
+        <item>Resta</item>
+        <item>Multiplica</item>
+        <item>Divide</item>
+    </string-array>
+
+</resources>
