@@ -49,8 +49,8 @@ public class menu4 extends Fragment {
             @Override
             public void onClick(View v) {
                 if (v.getId() == R.id.buttonCalcula) {
-                    Log.v("Test", "Boton pulsado");
-                    Toast.makeText(getActivity(), "Operacion realizada", Toast.LENGTH_SHORT).show();
+                    Log.v("Test", "Botón pulsado");
+                    Toast.makeText(getActivity(), "Operación realizada", Toast.LENGTH_SHORT).show();
                     textViewRes.setText(calcula());
                 }// if
             }
@@ -84,7 +84,7 @@ public class menu4 extends Fragment {
             Log.d("Prueba", spinnerOperation.getSelectedItem().toString());
             //Mostramos un mensaje vol�til en forma de Toast al usuario
             Toast.makeText(getActivity(), "Introduce los valores", Toast.LENGTH_SHORT).show();
-            res = "Introduce los operadores numericos";
+            res = "ERROR 404";
             return res;
         } else {
             //Obtenemos los valores numericos de los operaderos
