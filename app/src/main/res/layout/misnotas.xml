@@ -32,7 +32,9 @@
             android:layout_below="@+id/textView"
             android:ems="10"
             android:hint="Ingrese Titulo"
-            android:inputType="text|textLongMessage|date" />
+            android:inputType="text|textLongMessage|date"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
         <Button
             android:text="Grabar"
