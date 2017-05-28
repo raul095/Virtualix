@@ -23,6 +23,7 @@ public class menu4 extends Fragment {
     Spinner spinnerOperation;
     TextView editTextFirst;
     TextView editTextSecond;
+    public enum Operaciones{Suma, Resta, Multiplica, Divide}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -91,7 +92,7 @@ public class menu4 extends Fragment {
             calculadora.setOperador1(Double.parseDouble(editTextFirst.getText().toString()));
             calculadora.setOperador2(Double.parseDouble(editTextSecond.getText().toString()));
             //Sacamos el tipo de operacion seleccionada por el usuario
-            MainActivity.Operaciones op = MainActivity.Operaciones.valueOf(spinnerOperation.getSelectedItem().toString());
+            menu4.Operaciones op = menu4.Operaciones.valueOf(spinnerOperation.getSelectedItem().toString());
 
             switch (op) {
                 case Suma:
