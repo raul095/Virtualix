@@ -39,7 +39,7 @@
                 android:paddingRight="10sp"
                 android:textColor="@android:color/background_light"
                 android:textColorHint="@android:color/background_light"
-                tools:textSize="18sp" />
+                android:textSize="24sp" />
 
             <Spinner
                 android:id="@+id/spinnerOperation"
@@ -61,8 +61,7 @@
                 android:paddingLeft="10sp"
                 android:textColor="@android:color/background_light"
                 android:textColorHint="@android:color/background_light"
-                android:textSize="@dimen/activity_horizontal_margin"
-                tools:textSize="18sp" />
+                android:textSize="24sp" />
 
         </RelativeLayout>
 

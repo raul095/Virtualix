@@ -108,9 +108,9 @@ public class index extends AppCompatActivity
         } else if (id == R.id.calculadora) {
             fragmento = new menu4();
         } else if (id == R.id.nav_share) {
-
+            fragmento = new menu_share();
         } else if (id == R.id.nav_send) {
-
+            fragmento = new menu_info();
         }
         else if (id == R.id.logout) {
             finish();
