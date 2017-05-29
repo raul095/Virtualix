@@ -1,9 +1,11 @@
 package com.example.david.virtualix;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentContainer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +26,12 @@ public class menu3 extends Fragment {
         return inflater.inflate(R.layout.misnotas, container, false);
     }
 
-    public class notas extends FragmentActivity {
+    @Override
+    public void startActivity(Intent intent) {
+        super.startActivity(intent);
+    }
+
+    public class notas extends AppCompatActivity {
         //Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS)
         private EditText et1,et2;
 

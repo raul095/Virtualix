@@ -19,7 +19,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="24dp"
             android:elevation="0dp"
-            android:text="Bienvenido a Virtualix"
+            android:text="Bienvenid@ a Virtualix"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textSize="36sp" />
 
