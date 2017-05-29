@@ -20,13 +20,16 @@ public class index extends AppCompatActivity
     DrawerLayout drawer;
 
     @Override
+    /**
+    *
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.index);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
+        //
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -43,6 +46,10 @@ public class index extends AppCompatActivity
 
     }
 
+    /**
+     * Sobreescribir el método de pulsar botón atrás.
+     * Utilizar el FragmentManager de la gestión del Activity
+     */
     @Override
     public void onBackPressed() {
         /*
@@ -111,7 +118,7 @@ public class index extends AppCompatActivity
         }
 
         if (fragmento != null) {
-            fragmentManager.popBackStackImmediate("0", 0);
+            //fragmentManager.popBackStackImmediate("0", 0);
             int count = fragmentManager.getBackStackEntryCount();
 
             FragmentTransaction fragmentTransaction = fragmentManager
@@ -121,11 +128,21 @@ public class index extends AppCompatActivity
                     .addToBackStack(String.valueOf(count)).commit();
         } else {
             // error in creating fragment
-            Log.e("MainActivity", "Error in creating fragment");
+            Log.e(this.getClass().getCanonicalName(), "Error in creating fragment");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
     }
 }

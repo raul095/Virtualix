@@ -1,6 +1,7 @@
 package com.example.david.virtualix;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -23,7 +24,8 @@ public class menu4 extends Fragment {
     Spinner spinnerOperation;
     TextView editTextFirst;
     TextView editTextSecond;
-    public enum Operaciones{Suma, Resta, Multiplica, Divide}
+    public enum Operaciones{Sumar, Restar, Multiplicar, Dividir}
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -73,6 +75,8 @@ public class menu4 extends Fragment {
         spinnerOperation.setAdapter(adapter);
     }// loadSpinner
 
+
+
     private String calcula() {
         double op1, op2;
         String value1, value2, res;
@@ -95,16 +99,16 @@ public class menu4 extends Fragment {
             menu4.Operaciones op = menu4.Operaciones.valueOf(spinnerOperation.getSelectedItem().toString());
 
             switch (op) {
-                case Suma:
+                case Sumar:
                     res = "" + calculadora.suma();
                     break;
-                case Resta:
+                case Restar:
                     res = "" + calculadora.resta();
                     break;
-                case Divide:
+                case Dividir:
                     res = "" + calculadora.divide();
                     break;
-                case Multiplica:
+                case Multiplicar:
                     res = "" + calculadora.multiplica();
                     break;
                 default:
@@ -114,5 +118,4 @@ public class menu4 extends Fragment {
             return res;
         }// if
     }// calcula
-
 }

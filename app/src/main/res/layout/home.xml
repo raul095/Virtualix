@@ -31,5 +31,6 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="17dp"
             app:srcCompat="@drawable/logo" />
+
     </RelativeLayout>
 </FrameLayout>
