@@ -25,12 +25,12 @@
 
     </group>
 
-    <item android:title="Social">
+    <item android:title="Información">
         <menu>
             <item
                 android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:icon="@drawable/ic_info_outline"
+                android:title="¿Qué es la FP?" />
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_info_outline"
