@@ -15,7 +15,6 @@ import static com.example.david.virtualix.R.id.mcwebview;
 public class menu1 extends Fragment {
 
     private WebView wv;
-    private WebView browser;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -28,9 +27,6 @@ public class menu1 extends Fragment {
         wv.setWebViewClient(new MyCustomWebViewClient());
         wv.loadUrl("file:///android_asset/www/principal.html");
         return V;
-
-        //browser = (WebView)browser.findViewById(R.id.mcwebview);
-        //browser.getSettings().setJavaScriptEnabled(true);
     }
 
     private class MyCustomWebViewClient extends WebViewClient {
