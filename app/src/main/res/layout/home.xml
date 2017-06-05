@@ -4,4 +4,6 @@
     android:id="@+id/hwebview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.david.virtualix.menu2"></WebView>
+    tools:context="com.example.david.virtualix.menu2">
+
+</WebView>

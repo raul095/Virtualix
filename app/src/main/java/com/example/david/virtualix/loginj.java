@@ -24,6 +24,7 @@ public class loginj extends AppCompatActivity {
                 {
                     Intent nuevoform  = new Intent(loginj.this, index.class);
                     startActivity(nuevoform);
+                    finish();
                 }
                 else
                 {

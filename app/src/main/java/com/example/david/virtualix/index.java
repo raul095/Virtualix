@@ -1,6 +1,7 @@
 package com.example.david.virtualix;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -20,9 +21,6 @@ public class index extends AppCompatActivity
     DrawerLayout drawer;
 
     @Override
-    /**
-    *
-     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.index);
@@ -52,14 +50,6 @@ public class index extends AppCompatActivity
      */
     @Override
     public void onBackPressed() {
-        /*
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-            if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-           } else {
-               super.onBackPressed();
-           }
-           */
 
         if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
             return;
@@ -83,6 +73,7 @@ public class index extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            finish();
             return true;
         }
 
@@ -113,8 +104,9 @@ public class index extends AppCompatActivity
             fragmento = new menu_info2();
         }
         else if (id == R.id.logout) {
+            Intent logout  = new Intent(index.this, loginj.class);
+            startActivity(logout);
             finish();
-            return true;
         }
 
         if (fragmento != null) {

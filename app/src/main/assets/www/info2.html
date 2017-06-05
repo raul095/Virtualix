@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>¿Quiénes somos?</title>
+        <style type="text/css">
+
+         body {
+             background-image: url(logo2.png);
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-position: top 8% left;
+             background-size: 100%;
+             background-color: #a9cce3;
+             }
+
+		 .loader {
+    		border: 16px solid #f3f3f3; /* Light grey */
+   			border-top: 4px solid #5DADE2; /* Blue */
+			border-right:4px solid #A569BD; /* Blue */
+			border-left: 4px solid #A569BD; /* Blue */
+			border-bottom: 4px solid #5DADE2; /* Blue */
+   			 border-radius: 50%;
+    		width: 20px;
+    		height: 20px;
+   			 animation: spin 2s linear infinite;
+            }
+
+            .column {
+                float: left;
+                width: 33.3%;
+                margin-bottom: 16px;
+                padding: 0 8px;
+            }
+
+
+            @media {
+                .column {
+                    width: 96%;
+                    display: block;
+                }
+            }
+
+
+            .card {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            }
+
+
+            .container {
+                padding: 0 16px;
+            }
+
+
+            .container::after, .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+            .title {
+                color: grey;
+            }
+
+            .button {
+                border: none;
+                outline: 0;
+                display: inline-block;
+                padding: 8px;
+                color: white;
+                background-color: #000;
+                text-align: center;
+                cursor: pointer;
+                width: 100%;
+            }
+
+            .button:hover {
+                background-color: #555;
+            }
+
+         </style>
+    </head>
+
+    <body>
+
+        <h1>¿Quiénes somos?</h1>
+        <p align="justify">Somos un grupo de estudiantes del grado superior de Administración de Sistemas Informáticos en Red, que trabajan en el proyecto Virtualix, un centro de formación virtual.</p>
+        <br>
+        <h1>¿Qué ofrecemos?</h1>
+        <p align="justify">Esta aplicación ofrece información acerca de los diferentes grados superiores del campo informático, para que obtengas la formación que deseas. Porque a nosotros nos promueve tu formación y tu futuro</p>
+        <br>
+        <h2>Encuéntranos</h2>
+        <div id="map" style="width:395px;height:395px;background:yellow";></div>
+
+        <script src="maps.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDL0zZ7Nk5lqC6vA04adAvPdzdx4DSJiLE&callback=myMap"></script>
+
+        <br><br>
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <center><img src="administrador.png" style="width:70%"></center>
+                    <div class="container">
+                        <h2>Administrador</h2>
+                        <p class="title">Admin aplicación Virtualix</p>
+                        <p align="justify">Para cualquier problema relacionado con la aplicación envíenos un correo electrónico a la dirección indicada a continuación</p>
+                        <p>admin.virtualix@gmail.com</p>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
