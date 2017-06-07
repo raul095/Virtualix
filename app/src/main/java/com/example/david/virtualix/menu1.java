@@ -25,6 +25,8 @@ public class menu1 extends Fragment {
 
 
         wv.setWebViewClient(new MyCustomWebViewClient());
+        wv.getSettings().setJavaScriptEnabled(true);
+
         wv.loadUrl("file:///android_asset/www/principal.html");
         return V;
     }

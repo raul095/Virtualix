@@ -44,8 +44,7 @@
             android:layout_below="@+id/et1"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:id="@+id/button"
-            android:onClick="grabar" />
+            android:id="@+id/button"/>
 
         <Button
             android:text="Recuperar"
@@ -54,8 +53,7 @@
             android:layout_alignBottom="@+id/button"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:id="@+id/button2"
-            android:onClick="recuperar" />
+            android:id="@+id/button2" />
 
         <EditText
             android:id="@+id/et2"
