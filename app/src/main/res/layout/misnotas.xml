@@ -38,13 +38,13 @@
             android:layout_alignParentEnd="true" />
 
         <Button
-            android:text="Grabar"
+            android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/et1"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:id="@+id/button"/>
+            android:layout_below="@+id/et1"
+            android:text="Guardar" />
 
         <Button
             android:text="Recuperar"

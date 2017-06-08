@@ -7,10 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 
-/**
- * Created by David on 29/05/2017.
- */
-
 public class menu_info2 extends Fragment {
 
     private WebView wv;

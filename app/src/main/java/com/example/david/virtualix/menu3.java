@@ -1,25 +1,20 @@
 package com.example.david.virtualix;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentContainer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+
 
 public class menu3 extends Fragment {
 
@@ -29,7 +24,6 @@ public class menu3 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.misnotas, container, false);
 
         // Asignación de elementos
@@ -40,7 +34,7 @@ public class menu3 extends Fragment {
 
 
         // Actividades de los botones o acciones
-        // GRABAR
+        // GUARDAR
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,7 +48,7 @@ public class menu3 extends Fragment {
                     archivo.close();
                 } catch (IOException e) {
                 }
-                Toast t = Toast.makeText(getActivity(), "Los datos fueron grabados ",Toast.LENGTH_SHORT);
+                Toast t = Toast.makeText(getActivity(), "La nota ha sido guardada correctamente ",Toast.LENGTH_SHORT);
                 t.show();
                 et1.setText("");
                 et2.setText("");
@@ -89,7 +83,7 @@ public class menu3 extends Fragment {
                     }
                 } else
                 {
-                    Toast.makeText(getActivity(),"No hay datos grabados para dicha fecha", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(),"No hay notas guardadas con ese título", Toast.LENGTH_LONG).show();
                     et2.setText("");
                 }
             }

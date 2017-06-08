@@ -1,9 +1,5 @@
 package com.example.david.virtualix;
 
-/**
- * Created by David on 18/05/2017.
- */
-
 public class Calculadora {
     double operador1, operador2;
     double resultado;

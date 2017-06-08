@@ -28,11 +28,11 @@
     <item android:title="Información">
         <menu>
             <item
-                android:id="@+id/nav_share"
+                android:id="@+id/info1"
                 android:icon="@drawable/ic_info_outline"
                 android:title="¿Qué es la FP?" />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/info2"
                 android:icon="@drawable/ic_info_outline"
                 android:title="¿Quiénes somos?" />
         </menu>

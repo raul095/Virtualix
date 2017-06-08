@@ -23,7 +23,6 @@ public class menu1 extends Fragment {
 
         wv = (WebView) V.findViewById(mcwebview);
 
-
         wv.setWebViewClient(new MyCustomWebViewClient());
         wv.getSettings().setJavaScriptEnabled(true);
 

@@ -5,12 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewPropertyAnimator;
 import android.webkit.WebView;
-
-/**
- * Created by David on 29/05/2017.
- */
 
 public class menu_info extends Fragment {
 

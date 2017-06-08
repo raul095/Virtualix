@@ -11,7 +11,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -59,19 +58,14 @@ public class index extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.index, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             finish();
             return true;
@@ -83,7 +77,7 @@ public class index extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
+        // Opciones para clicar en el menú desplegable
         int id = item.getItemId();
 
         android.support.v4.app.FragmentManager fragmentManager=getSupportFragmentManager();
@@ -98,9 +92,9 @@ public class index extends AppCompatActivity
             fragmento = new menu3();
         } else if (id == R.id.calculadora) {
             fragmento = new menu4();
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.info1) {
             fragmento = new menu_info();
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.info2) {
             fragmento = new menu_info2();
         }
         else if (id == R.id.logout) {
@@ -110,7 +104,6 @@ public class index extends AppCompatActivity
         }
 
         if (fragmento != null) {
-            //fragmentManager.popBackStackImmediate("0", 0);
             int count = fragmentManager.getBackStackEntryCount();
 
             FragmentTransaction fragmentTransaction = fragmentManager
@@ -118,9 +111,6 @@ public class index extends AppCompatActivity
             fragmentTransaction.replace(R.id.contenedor, fragmento)
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                     .addToBackStack(String.valueOf(count)).commit();
-        } else {
-            // error in creating fragment
-            Log.e(this.getClass().getCanonicalName(), "Error in creating fragment");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

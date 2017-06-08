@@ -47,7 +47,7 @@ public class menu4 extends Fragment {
 
 
         // EVENTOS DE LOS ELEMENTOS GRAFICOS
-        //Asignamos el listener al boton (en este caso la propia clase)
+        // Asignamos el listener al boton (en este caso la propia clase)
         buttonCalcula.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,12 +66,12 @@ public class menu4 extends Fragment {
     }
 
     private void loadSpinner() {
-        // Create an ArrayAdapter using the string array and a default spinner layout
+        // Creamos un ArrayAdapter usando el string array y el layout del spinner.
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
                 R.array.operationsArray, android.R.layout.simple_spinner_item);
-        // Specify the layout to use when the list of choices appears
+        // Decimos que layaout se usará cuando se se seleccione el spinner
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
+        // Se alica el adaptador al spinner
         spinnerOperation.setAdapter(adapter);
     }// loadSpinner
 
@@ -80,22 +80,22 @@ public class menu4 extends Fragment {
     private String calcula() {
         double op1, op2;
         String value1, value2, res;
-        //Obtenemos el valor de los operadores
+        // Obtenemos el valor de los operadores
         value1 = editTextFirst.getText().toString();
         value2 = editTextSecond.getText().toString();
-        //Comprobamos que se ha introducido algun valor numerico
+        // Comprobamos que se ha introducido algún valor numérico
         if (value1.matches("") || value2.matches("")) {
             //Mostramos por el LogCat un mensaje
             Log.d("Prueba", spinnerOperation.getSelectedItem().toString());
-            //Mostramos un mensaje vol�til en forma de Toast al usuario
+            // Mostramos un mensaje de notificación al usuario
             Toast.makeText(getActivity(), "Introduce los valores", Toast.LENGTH_SHORT).show();
             res = "Introduce los operadores numéricos";
             return res;
         } else {
-            //Obtenemos los valores numericos de los operaderos
+            // Obtenemos los valores numéricos de los operaderos
             calculadora.setOperador1(Double.parseDouble(editTextFirst.getText().toString()));
             calculadora.setOperador2(Double.parseDouble(editTextSecond.getText().toString()));
-            //Sacamos el tipo de operacion seleccionada por el usuario
+            // Sacamos el tipo de operacién seleccionada por el usuario
             menu4.Operaciones op = menu4.Operaciones.valueOf(spinnerOperation.getSelectedItem().toString());
 
             switch (op) {
